@@ -1,5 +1,6 @@
-﻿#include <iostream>
+#include <iostream>
 #include <conio.h>
+#include <string>
 #include <windows.h>
 #include "stringconvert.h"
 
@@ -16,7 +17,7 @@ int main()
         system("cls");
         cout << "RPN calculator" << endl;
         cout << "Enter a mathematical operation: ";
-        cin >> operation;
+        getline(cin, operation);
         RPN = ONP_expr(alg_expr(operation));
         cout << "RPN expression: ";
         for (auto i: RPN) {
